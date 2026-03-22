@@ -1,0 +1,41 @@
+<div class="navbar-home">
+  <nav class="navbar navbar-expand-md bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"
+        ><img src="/images/weblogo.png" width="180px"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link" href="/students">All Student</a>
+          <a class="nav-link" href="/students/new">Add New Student</a>
+        </div>
+        <div class="navbar-nav logbtn ms-auto">
+
+          <% if (!currentUser) { %>
+            <!-- If NOT logged in -->
+            <a class="nav-link" href="/signup">SignUp</a> &nbsp;
+           <a class="nav-link" href="/login">Login</a>
+
+          <% } %>
+          
+          <% if (currentUser) { %>
+            <span class="nav-link"><i class="fa-solid fa-user"></i> <%= currentUser.username %></span> &nbsp;
+            <a class="nav-link" href="/logout">Logout</a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,48 @@
+<% layout("layouts/boilerplate")%>
+
+<body id="register-form">
+  <div class="container my-5">
+    
+    <!--  Dynamic Heading of department and semester -->
+    <h2 class="mb-4 text-center">
+      <%= department %> - Semester <%= semester %> Students
+    </h2>
+
+    <div class="list-group shadow-sm">
+
+      <!-- Handle empty case -->
+      <% if (students.length === 0) { %>
+        <h4 class="text-center text-danger">No students found</h4>
+      <% } else { %>
+
+        <% for(let student of students) { %>
+          <div class="list-group-item d-flex justify-content-between align-items-center student-row">
+
+            <!-- Student Link -->
+            <a href="/students/<%= student.student_id %>" class="student-name">
+              <%= student.student_id %> &nbsp; &nbsp; <%= student.name %>
+            </a>
+
+            <!-- Attendance Buttons -->
+            <div>
+              <form action="/attendance" method="POST" class="d-inline">
+                <input type="hidden" name="student_id" value="<%= student.student_id %>">
+                <input type="hidden" name="status" value="present">
+                <button class="btn btn-success btn-sm">P</button>
+              </form> &nbsp;
+
+              <form action="/attendance" method="POST" class="d-inline">
+                <input type="hidden" name="student_id" value="<%= student.student_id %>">
+                <input type="hidden" name="status" value="absent">
+                <button class="btn btn-danger btn-sm">A</button>
+              </form>
+            </div>
+
+          </div>
+        <% } %>
+
+      <% } %>
+
+    </div>
+  </div>
+</body>

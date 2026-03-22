@@ -1,0 +1,40 @@
+<% layout("layouts/boilerplate") %>
+
+<body id="register-form">
+  <div class="container my-3">
+    <div class="row">
+      <h2 style="text-align: center" class="mb-3">Sign up Here</h2>
+      <form method="post" action="/signup" class="needs-validation" novalidate>
+        <div class="col-lg-6 offset-3 form-body px-4">
+          <br />
+          <h2>Welcome to Attend Track</h2>
+          <div class="my-3">
+            <label for="username" class="form-label">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              name="username"
+              required
+            />
+            <div class="invalid-feedback">Enter Username</div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password </label>
+            <input
+              type="password"
+              class="form-control"
+              id="inputpass"
+              name="password"
+              required
+            />
+            <input type="checkbox" id="showpass" onclick="togglepassword()" />
+            <label for="showpass"> Show Password</label>
+            <div class="invalid-feedback">Enter password</div>
+          </div>
+          <button class="btn btn-primary">Sign up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

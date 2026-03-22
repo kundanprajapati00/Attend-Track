@@ -1,0 +1,99 @@
+<% layout("layouts/boilerplate")%>
+
+<body id="register-form">
+  <div class="container my-5">
+    <div class="row justify-content-center add-form">
+      <div class="col-lg-8 form-body">
+        <form
+          action="/students/new"
+          method="post"
+          class="needs-validation"
+          novalidate
+        >
+          <br />
+          <h2>Add New Student</h2>
+          <br />
+          <div class="mb-3">
+            <label for="name" class="form-label">Student Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              required
+            />
+            <div class="invalid-feedback">Please Enter Name</div>
+          </div>
+          <div class="mb-3">
+            <label for="department" class="form-label"> Department</label>
+            <select
+              name="department"
+              id="department"
+              class="form-select"
+              required
+            >
+              <option value="bca">BCA</option>
+              <option value="btech">B TECH</option>
+              <option value="IT">IT</option>
+            </select>
+
+            <div class="invalid-feedback">Please Enter Department</div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              required
+            />
+            <div class="invalid-feedback">Enter Email Address</div>
+          </div>
+          <div class="row">
+            <div class="mb-3 col-md-6">
+              <label for="semester" class="form-label">Semester</label>
+              <select
+                name="semester"
+                id="semester"
+                class="form-select"
+                required
+              >
+                <option selected value="1">Semester 1</option>
+                <option value="2">Semester 2</option>
+                <option value="3">Semester 3</option>
+                <option value="4">Semester 4</option>
+                <option value="5">Semester 5</option>
+                <option value="6">Semester 6</option>
+              </select>
+            </div>
+            <div class="mb-3 col-md-6">
+              <label for="rollno" class="form-label"> Roll No</label>
+              <input
+                type="text"
+                class="form-control"
+                id="rollno"
+                name="rollno"
+                required
+              />
+              <div class="invalid-feedback">Enter Roll_no</div>
+            </div>
+          </div>
+
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+              required
+            />
+            <label class="form-check-label" for="exampleCheck1"
+              >I confirm that the above details are correct</label
+            >
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

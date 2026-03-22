@@ -1,0 +1,63 @@
+<% layout("layouts/boilerplate")%>
+
+<body id="register-form">
+  <div class="container my-5">
+    <div class="row justify-content-center add-form">
+      <div class="col-lg-8 form-body">
+        <form
+          method="post"
+          action="/students/<%= student.student_id %>?_method=PATCH"
+          class="needs-validation"
+          novalidate
+        >
+          <br />
+          <h2>Update Student details</h2>
+          <br />
+          <div class="mb-3">
+            <h5>Student Name : <%= student.name%></h5>
+          </div>
+          <div class="mb-3">
+            <h5>Department : <%= student.department%></h5>
+          </div>
+          <div class="mb-3">
+            <h5>Email id : <%= student.email%></h5>
+          </div>
+          <div class="row">
+            <div class="mb-3 col-md-6">
+              <label for="semester" class="form-label">Semester</label>
+              <select
+                name="semester"
+                id="semester"
+                class="form-select"
+                required
+              >
+                <option selected value=" <%= student.semester %>">
+                  Semester <%= student.semester %>
+                </option>
+                <option value="1">Semester 1</option>
+                <option value="2">Semester 2</option>
+                <option value="3">Semester 3</option>
+                <option value="4">Semester 4</option>
+                <option value="5">Semester 5</option>
+                <option value="6">Semester 6</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+              required
+            />
+            <label class="form-check-label" for="exampleCheck1"
+              >I confirm that the above detail is Upated</label
+            >
+          </div>
+          <button type="submit" class="btn btn-primary px-4 mx-3">Edit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,44 @@
+<% layout("layouts/boilerplate") %>
+
+<body id="register-form">
+  <div class="container my-5">
+    <div class="row">
+      <div class="stu-info py-3">
+        <h2>STUDENT INFORMATION</h2>
+        <br />
+        <hr />
+        <p>
+          NAME :- <%= student.name %> <br />
+          STUDENT ID :- <%= student.student_id %> <br />
+          ROLL NO :- <%= student.roll_no %> <br />
+          DEPARTMENT :- <%= student.department %> <br />
+          SEMESTER :- <%= student.semester %> <br />
+          EMAIL ID :- <%= student.email %> <br />
+          TOTAL CLASS ATTENDED :- <%= present %> class &nbsp; &nbsp; <%=
+          percentage %> % Attendence
+        </p>
+        <div class="edt-btn-container">
+          <form method="get" action="/students/<%= student.student_id %>/edit">
+            <button class="btn btn-warning">Edit Details</button>
+          </form>
+          <form
+            method="post"
+            action="/students/<%= student.student_id %>?_method=DELETE"
+            onsubmit="return confirmDelete();"
+          >
+            <button class="btn btn-danger">Delete Student</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmation JS -->
+  <script>
+    function confirmDelete() {
+      return confirm(
+        "⚠️ Are you sure you want to permanently delete this Student?",
+      );
+    }
+  </script>
+</body>

@@ -1,0 +1,239 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contain {
+  flex: 1;
+}
+
+/* navbar styling  */
+
+.navbar {
+  background-color: rgb(2, 29, 69) !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+.container-fluid a img {
+  border-radius: 1rem;
+}
+.nav-link {
+  font-size: 1.12rem !important;
+  font-weight: 500 !important;
+  color: #f8f9fa !important;
+}
+.nav-link:hover {
+  color: #ffa735 !important;
+}
+.logbtn a {
+  border: 2px solid rgba(255, 255, 255, 0.76);
+  border-radius: 0.5rem;
+}
+.logbtn a:hover {
+  background-color: #ffffff;
+  color: rgb(2, 29, 69) !important;
+}
+
+/* main section image carousel  */
+
+.carousel img {
+  margin-top: 0.5rem !important;
+  height: 70vh;
+  width: 92rem !important;
+  margin: 1.5rem auto !important;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.package-info {
+  height: 18rem;
+  width: 28rem;
+  position: absolute;
+  bottom: 7rem;
+}
+
+/* students semester section  */
+
+.home_student {
+  height: 6rem;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  text-align: center;
+  display: flex;
+}
+.all_stu {
+  width: 35%;
+  height: 5rem;
+  margin: 0px auto;
+  padding-top: 1.2rem;
+  /* border: 1px solid #1e3a8a; */
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: #2aa727;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+.all_stu:hover {
+  transform: scale(1.01);
+  box-shadow: 2px 2px 8px darkgreen;
+}
+
+.outer-card {
+  border-radius: 0.5rem;
+  transform: scale(1);
+  transition: transform 300ms;
+
+  color: #ffffff;
+}
+.outer-card:hover {
+  box-shadow: 5px 5px 10px black;
+  transform: scale(1.01);
+}
+.card {
+  border: none;
+  height: 6rem !important;
+}
+.card-body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.card-body a {
+  height: 4rem !important;
+  width: 100% !important;
+}
+.track-at {
+  margin-left: 5rem;
+  font-weight: 700;
+}
+
+.sem-student {
+  border-radius: 1rem;
+  width: 85%;
+  margin: 1.5rem auto;
+  background-color: white;
+}
+.sem-student:hover {
+  box-shadow: 4px 4px 10px black;
+}
+.sem-student h3 {
+  padding-top: 1rem;
+  margin: 2rem;
+  font-size: 2rem;
+}
+
+#ho {
+  background-color: #d2e8f683;
+}
+/* adding new student  */
+
+#register-form {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+#rollno {
+  text-transform: uppercase;
+}
+.form-body {
+  padding-bottom: 2rem;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 4px 4px 10px black;
+}
+form h2 {
+  text-align: center;
+  font-family: "monospace";
+  font-weight: 700;
+}
+
+/* All student.ejs */
+
+.stud-info {
+  display: flex;
+}
+
+.student-row {
+  transition: all 0.2s ease;
+  border-radius: 10px;
+}
+
+.student-row:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.01);
+}
+
+.student-name {
+  text-decoration: none;
+  font-weight: 500;
+  color: #212529;
+}
+
+.student-name:hover {
+  color: #0d6efd;
+}
+
+.btn-sm {
+  width: 40px;
+  font-weight: bold;
+}
+
+/* show student page  */
+
+.stu-info {
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 9px black;
+}
+.stu-info h2 {
+  text-align: center;
+}
+.stu-info p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-shadow: #212529;
+  line-height: 2rem;
+  padding-left: 3rem;
+  padding-top: 3rem;
+}
+
+.edt-btn-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* -------------- footer ----------- */
+
+.footer-info {
+  height: 8.2rem;
+  background-color: rgba(141, 138, 138, 0.386);
+  display: flex;
+  flex-wrap: wrap;
+}
+.f-info-social {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+.f-info-social i {
+  font-size: 1.3rem;
+}
+.f-info-social i:hover {
+  font-size: 1.4rem;
+}
+.f-info-company {
+  margin: auto;
+}
+.f-info-links {
+  width: 100%;
+  text-align: center;
+}
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+.f-info-links:hover a {
+  text-decoration: underline;
+}
